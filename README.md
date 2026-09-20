@@ -1,43 +1,43 @@
-# Age-verification flow prototype
+# Prototyp průchodu ověřením věku
 
-A Next.js prototype exploring a multi-step age-verification experience.
+Prototyp v Next.js zaměřený na vícekrokové uživatelské rozhraní pro ověření věku.
 
-**Status:** Legacy/parallel PassProve implementation retained for reference; not presented as the canonical production release.
+**Stav:** Starší nebo souběžná varianta PassProve uchovaná jako reference; nejde o označení hlavní produkční verze.
 
-## Scope
+## Co projekt obsahuje
 
-- UI steps for bank identity, face/document scan, another device and repeated verification.
-- Verification-result presentation.
-- API, monitoring, notification and queue helper modules.
+- Kroky pro bankovní identitu, sken obličeje či dokladu, jiné zařízení a opakované ověření.
+- Zobrazení výsledku ověření.
+- Pomocné moduly API, monitoringu, oznámení a fronty.
 
-## Technology
+## Technologie
 
 Next.js, React, TypeScript, Tailwind CSS.
 
-## Architecture and source map
+## Architektura a struktura
 
-- `app/` — Next.js routes
-- `components/` — verification-step UI
-- `lib/` — integration/helper modules
-- `age-verification-page.tsx` — verification page source
+- `app/` — stránky Next.js
+- `components/` — rozhraní ověřovacích kroků
+- `lib/` — integrační a pomocné moduly
+- `age-verification-page.tsx` — zdroj ověřovací stránky
 
-## Local development
+## Lokální vývoj
 
-Requires Node.js and npm. From the repository root:
+Potřebujete Node.js a npm. V kořenové složce repozitáře spusťte:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Build command declared by this checkout: `npm run build`.
+Příkaz pro sestavení uvedený v projektu: `npm run build`.
 
-These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
+Jde o příkazy deklarované v repozitáři, nikoli o potvrzení úspěšného sestavení. Instalace závislostí, sestavení ani napojení na živé služby nebyly při úpravě dokumentace spuštěny.
 
-## Configuration and limitations
+## Konfigurace a omezení
 
-Method names describe available screens, not verified provider contracts or certification. Review helper modules and dependency completeness before attempting backend integration. Use synthetic test data only.
+Názvy metod označují dostupné obrazovky, nikoli ověřené smluvní integrace nebo certifikaci. Před napojením služeb zkontrolujte pomocné moduly a úplnost závislostí. Používejte fiktivní testovací data.
 
-## Documentation next steps
+## Co doplnit do dokumentace
 
-Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
+Snímky obrazovky s fiktivními daty, opakovatelný postup ověření a přehled skutečně otestovaných integrací. Přihlašovací údaje a konfigurace konkrétního nasazení patří mimo Git.
